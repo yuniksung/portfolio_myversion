@@ -1,0 +1,95 @@
+.about-wrapper{
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+
+.about-container{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .about-me{
+        
+        height: 120px;
+        padding-right: 40px;
+        padding-top: 10px;
+        margin-right: 40px;
+         h1{
+            font-size: 68px;
+         }
+
+         .resume{
+             margin: 10px;
+             text-align: center;
+
+             button{
+                 padding: 10px 20px;
+                 color: #000;
+                 border: 2px solid black;
+                 background: transparent;
+                 outline: none;
+                transition: 0.35s;
+                 &:hover {
+                     background: rgb(211, 211, 211);
+                 }
+             }
+         }
+    }
+
+    .text-intro{
+        width: 50%;
+        border-left: 1px solid gray;
+        display: flex;
+        flex-direction: column;
+        padding-left: 100px;
+    
+    .text{
+        width: 100%;
+        margin-bottom: 20px;
+        p{
+            font-size: 30px;
+        }
+    }
+
+    .second-about{
+        margin-bottom: 20px;
+    }
+    
+    }
+
+    .ability{
+        display: flex;
+        flex-direction: column;
+        
+
+        p{
+            margin-bottom: 10px;
+        }
+
+        .skill-set{
+            display: flex;
+
+            .first-skill{
+                margin-left: 40px;
+
+                li{
+                    line-height: 150%;
+                }
+                
+            }
+
+            .second-skill{
+                padding-left: 40px;
+                li{
+                    line-height: 150%;
+                }
+            }
+        }
+    }
+}
+}
