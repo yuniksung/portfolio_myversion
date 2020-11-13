@@ -1,5 +1,4 @@
 .about-wrapper{
-    background: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,7 +19,7 @@
         padding-top: 10px;
         margin-right: 40px;
          h1{
-            font-size: 68px;
+            font-size: $titleTxt;
          }
     }
 
@@ -35,7 +34,7 @@
         width: 100%;
         margin-bottom: 20px;
         p{
-            font-size: 30px;
+            font-size: $bodyH2;
         }
     }
 
@@ -52,6 +51,7 @@
 
         p{
             margin-bottom: 10px;
+            font-size: $bodyH2;
         }
 
         .skill-set{
@@ -59,7 +59,7 @@
 
             .first-skill{
                 margin-left: 40px;
-
+                
                 li{
                     line-height: 150%;
                 }
@@ -68,7 +68,18 @@
 
             .second-skill{
                 padding-left: 40px;
+                
                 li{
+                    margin-left: 20px;
+                    line-height: 150%;
+                }
+            }
+
+            .third-skill{
+                padding-left: 40px;
+        
+                li{
+                    margin-left: 20px;
                     line-height: 150%;
                 }
             }
