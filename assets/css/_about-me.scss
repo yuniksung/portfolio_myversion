@@ -22,23 +22,6 @@
          h1{
             font-size: 68px;
          }
-
-         .resume{
-             margin: 10px;
-             text-align: center;
-
-             button{
-                 padding: 10px 20px;
-                 color: #000;
-                 border: 2px solid black;
-                 background: transparent;
-                 outline: none;
-                transition: 0.35s;
-                 &:hover {
-                     background: rgb(211, 211, 211);
-                 }
-             }
-         }
     }
 
     .text-intro{
@@ -92,4 +75,40 @@
         }
     }
 }
+}
+
+.bg-image {
+    background-image: url(../images/bg1.jpg);
+    filter: blur(6px);
+    -webkit-filter: blur(6px);
+    height: 300px; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.bg-text {
+    color: white;
+    font-weight: bold;
+    transform: translate(0%, -150%);
+    z-index: 2;
+    text-align: center;
+
+    h1{
+        padding-bottom: 60px;
+    }
+    
+    button{
+        padding: 10px 20px;
+        color: #fff;
+        border: 2px solid #fff;
+        background: transparent;
+        outline: none;
+        transition: 0.35s;
+        font-size: 22px;
+        &:hover {
+            background: rgb(211, 211, 211);
+        }
+    }
 }
