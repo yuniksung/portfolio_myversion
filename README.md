@@ -13,6 +13,8 @@
 * HTML
 * SASS
 
+Deployed Application: https://yuniksung.github.io/portfolio_v2/.
+
 ---
 ## Contribution
 - YUNIK SUNG <YUNIKSUNG@GMAIL.COM>
