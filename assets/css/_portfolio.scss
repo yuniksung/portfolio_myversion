@@ -115,6 +115,10 @@ section{
                     color: rgb(56, 56, 56);
                     font-size: 30px;
                     text-decoration: none;
+
+                    &:hover{
+                        color: rgb(82, 82, 82);
+                    }
                 }
             }
         }
@@ -198,6 +202,10 @@ section{
                     color: rgb(56, 56, 56);
                     font-size: 30px;
                     text-decoration: none;
+
+                    &:hover{
+                        color: rgb(82, 82, 82);
+                    }
                 }
             }
         }
@@ -237,6 +245,11 @@ section{
         flex-direction: column;
         justify-content: space-between;
         box-shadow: 4px 4px 8px rgb(54, 54, 54);
+        transition: 0.35s;
+
+        &:hover{
+            transform:scale(1.1);
+        }
         
         .link-project{
             text-align: right;
@@ -246,7 +259,10 @@ section{
                 color: rgb(148, 148, 148);
                 font-size: 30px;
                 padding-left: 20px;
-                
+
+                &:hover{
+                    color: rgb(212, 212, 212);
+                }
             }
         }
 
