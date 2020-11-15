@@ -2,6 +2,7 @@
 // color
 $navColor:rgb(211, 211, 211);
 $defaultbg: #fff;
+$workBorder: rgb(109, 109, 109);
 
 // text-size
 $bodyP: 16px;
@@ -15,6 +16,10 @@ $titleTxt: 70px;
     scroll-behavior: smooth;
 }
 
+body{
+  background-color: rgb(206, 206, 206);
+}
+
 // Set text color based on bg
 @function menu-text-color($color) {
     @if(lightness($color) > 50) {
@@ -23,4 +28,20 @@ $titleTxt: 70px;
         @return #fff3da;
     }
 }
+
+// Media Queries
+@mixin breakpoint($point) {
+    @if $point == big-tablet {
+      @media (max-width: 1024px) {@content;}
+    }
+    @if $point == mid-tablet {
+      @media (max-width: 770px) { @content; }
+    }
+    @else if $point == new-mobile {
+      @media (max-width: 550px) { @content; }
+    }
+    @else if $point == old-mobile{
+      @media (max-width: 400px){ @content; }
+    }
+  }
 

@@ -1,139 +1,274 @@
-
-$max: 8;
-
-#grid > div{
-    // width: $equ;
-    height: 400px;
-    // background: gray;
-    box-sizing: border-box;
-    float: left;
-    margin: 10px auto;
-    padding:20px;
-       
+:root{
+    --workBorder: gray;
 }
 
-@for $i from 1 through $max {
-
-    $equ: 100% / $i;
-
-    #grid.cell-#{ $i } > div {
-        width: $equ;
-    }
-}
-
-.portfolio-container{
+section{
+    margin: 0 auto;
+    padding: 100px 0px;
+    max-width: 1000px;
     display: flex;
     flex-direction: column;
-    h2{
-        font-size: $titleTxt;
-        margin: 20px auto 40px auto;
-        border-bottom: 1px solid gray;
-        width: 40%;
-        padding: 30px;
-        text-align: center;
-
-    }
-}
-
-.description{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    width:100%;
-    height:100%;
-
-.works{
-    box-shadow:0px 13px 7px grey;
-    &:hover{
-        box-shadow:0px 13px 7px rgb(115, 99, 133);
-    }
-}
-
-.work1 { //porfolio v1
-    width:100%;
-    height:100%;
-    background: url(../images/portfolio/computer1.jpg);
-    background-size: cover;
-}
-.work2 { //Calculator
-    width:100%;
-    height:100%;
-    background: url(../images/portfolio/calculator.jpg);
-    background-size: cover;
-}
-.work3 { //PW gen
-    width:100%;
-    height:100%;
-    background: url(../images/portfolio/password1.jpg);
-    background-size: cover;
-}
-.work4 { //Code Quiz
-    width:100%;
-    height:100%;
-    background: url(../images/portfolio/codequiz.jpg);
-    background-size: cover;
-}
-.work5 { //work-day-scheduler
-    width:100%;
-    height:100%;
-    background: url(../images/portfolio/screenshot.jpg);
-    background-size: cover;
-}
-.work6 { //weather
-    width:100%;
-    height:100%;
-    background: url(../images/portfolio/denver.jpg);
-    background-size: cover;
-}
-.work7 { //Meal Q
-    width:100%;
-    height:100%;
-    background: url(../images/portfolio/mealQ.jpg);
-    background-size: cover;
-}
-.info {
-    width: 100%;
-    height: auto;
-    display:inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(22, 22, 22);
-    box-shadow: 0px 13px 7px grey;
-}
-h1{
-    padding-top: 10px;
-    font-size: 20px;
-    color: rgb(194, 194, 194);
-} 
-
-p{
-    color: rgb(141, 141, 141);
-    padding: 10px 0;
-}
-
-.link{
     
-   
-    padding: 10px 0;
 
-    a{
-        text-decoration: none;
-        color: #fff;
-        padding: 5px 10px;
-        border: 1px solid #fff;
-        border-radius: 3px;
-        background-color: transparent;
+    .my-work{
+        color: rgb(0, 0, 100);
+        font-size: $bodyH2;
+        font-weight: 700;
+        margin-bottom: 50px;
 
-        &:hover{
-            color: rgb(185, 155, 255);
-            border: 1px solid rgb(185, 155, 255);
+        &:after{
+            content: "";
+            display: block;
+            position: relative;
+            top: -17px;
+            width: 300px;
+            height: 1px;
+            margin-left: 111px;
+            background-color: var(--workBorder);
+        }
+        
+    }
+
+    // first and third portfolio
+    .left-work{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 1fr;
+        -webkit-box-align: center;
+        align-items: center;
+        height: 400px;
+        overflow: hidden;
+        margin-bottom: 80px;
+        padding-bottom: 20px;
+
+        // left portfolio image
+        .first-img{
+            grid-column: 1/8;
+            grid-row: 1/2;
+            width: 100%;
+            height: 100%;
+            background: url(../images/portfolio/screenshot.jpg);
+            background-size: cover;
+            position: relative;
+            box-shadow: 4px 4px 8px rgb(66, 66, 66);
         }
 
-        &:active{
-            color: rgb(255, 23, 23);
-            border: 1px solid rgb(255, 23, 23);
+        .third-img{
+            grid-column: 1/8;
+            grid-row: 1/2;
+            width: 100%;
+            height: 100%;
+            background: url(../images/portfolio/mealQ.jpg);
+            background-size: cover;
+            position: relative;
+            box-shadow: 4px 4px 8px rgb(66, 66, 66);
+        }
+
+        .left-content {
+            grid-column: 7 /  13;
+            grid-row: 1/2;
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            margin-top: 100px;
+
+            .portfolio-title{
+                text-align: right;
+                padding-bottom: 20px;
+                p{
+                    font-size: $bodyH2;
+                };
+            }
+
+            .left-description{
+                background-color: rgb(66, 66, 66);
+                z-index: 6;
+                padding: 20px;
+                position: relative;
+                box-shadow: 4px 4px 8px rgb(66, 66, 66);
+
+                p{
+                    color: #fff;
+                    
+                    text-align: right;
+                }
+            }
+
+            .portfolio-list{
+                display: flex;
+                
+                padding: 20px 0;
+                li{
+                    margin-left: 20px;
+                    list-style: none;
+                    font-size: 20px;
+                    padding: 20px auto auto 10px;
+                }
+            }
+
+            .left-links{
+                a {
+                    margin: 20px;
+                    color: rgb(56, 56, 56);
+                    font-size: 30px;
+                    text-decoration: none;
+                }
+            }
+        }
+
+
+    }
+
+    // Second portfolio
+    .right-work{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 1fr;
+        -webkit-box-align: center;
+        align-items: center;
+        height: 400px;
+        overflow: hidden;
+        margin-bottom: 80px;
+        padding-bottom: 20px;
+
+        // left portfolio image
+        .right-img{
+            grid-column:  6/13;
+            grid-row: 1/2;
+            width: 100%;
+            height: 100%;
+            background: url(../images/portfolio/denver.jpg);
+            background-size: cover;
+            position: relative;
+            box-shadow: -4px 4px 8px rgb(66, 66, 66);
+        }
+
+        .right-content {
+            grid-column: 1/8;
+            grid-row: 1/2;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-top: 100px;
+            
+
+            .portfolio-title{
+                text-align: left;
+                padding-bottom: 20px;
+                p{
+                    font-size: $bodyH2;
+                };
+            }
+
+            .right-description{
+                background-color: rgb(66, 66, 66);
+                z-index: 6;
+                padding: 20px;
+                position: relative;
+                box-shadow: -4px 4px 8px rgb(66, 66, 66);
+
+                p{
+                    color: #fff;
+                    
+                    text-align: left;
+                }
+            }
+
+            .portfolio-list{
+                display: flex;
+                
+                padding: 20px 0;
+                li{
+                    margin-left: 20px;
+                    list-style: none;
+                    font-size: 20px;
+                    padding: 20px auto auto 10px;
+                }
+            }
+
+            .right-links{
+                a {
+                    margin: 20px;
+                    color: rgb(56, 56, 56);
+                    font-size: 30px;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    // Other projects style start
+
+    .other-project{
+        h1{
+            color: rgb(0, 0, 100);
+            font-size: $bodyH2;
+            font-weight: 700;
+            margin-bottom: 50px;
+
+            &:after{
+                content: "";
+                display: block;
+                position: relative;
+                top: -17px;
+                width: 300px;
+                height: 1px;
+                margin-left: 186px;
+                background-color: var(--workBorder);
+            }
+        }
+    
+    .box-element{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+
+    .box {
+        padding: 20px;
+        background-color: #333532;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 4px 4px 8px rgb(54, 54, 54);
+        
+        .link-project{
+            text-align: right;
+            margin-bottom: 20px;
+            a{
+                text-decoration: none;
+                color: rgb(148, 148, 148);
+                font-size: 30px;
+                padding-left: 20px;
+                
+            }
+        }
+
+        .project-name{
+            margin-bottom: 10px;
+            h2{
+                color: #fff;
+            }
+        }
+
+        .project-description{
+            margin-bottom: 10px;
+            p {
+                color: rgb(187, 187, 187);
+            }
+        }
+
+        .bottom-tech{
+            margin-bottom: 10px;
+            p{
+                color: rgb(187, 187, 187);
+            }
         }
     }
 }
