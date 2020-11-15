@@ -7,7 +7,7 @@
     Of course, I am going to re-write whole readme when I complete this website.
 
 ## Screenshot
-![](/assets/images/version2.jpg)
+![](/assets/images/capture.jpg)
 
 ## Built With
 * HTML
