@@ -1,10 +1,9 @@
 # Yunik's Portfolio Version 2
 
-    After the group project, I wanted to remodel my portfolio with using SASS. 
-    It is still under-construction (few more designs and media-queries) but instead of the first portfolio I wanted to show my capability by launching 2nd version. 
+I have created this website to improve my new language SASS skill. 
+For now, I haven't put any javascript, but later on I will add JS to add more animation effects onto this page.
 
-    To create this page, it tool about 8 hours. 
-    Of course, I am going to re-write whole readme when I complete this website.
+Also, due to completing this site within 2 days, I haven't worked on media-queries yet.
 
 ## Screenshot
 ![](/assets/images/capture.jpg)
