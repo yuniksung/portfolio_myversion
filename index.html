@@ -8,28 +8,68 @@
     <title>Yunik's Portfolio</title>
 </head>
 <body>
+   
+    <!-- Menu -->
+    <nav id="nav-sticky">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about-me">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#footer">Contact</a></li>
+        </ul>
+    </nav>
     <!-- Hero Start-->
-    
-        <nav id="nav-sticky">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about-me">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#footer">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="hero-area" id="home">
-        <div class="bcg-color">
-            <p>The secret of getting ahead is Getting started.</p>
-            <p class="mark-twain">-Mark Twain</p>
-            
+    <!-- img slider start -->
+    <div class="img-slider">
+    <div class="slider">
+        <div class="slides">
+            <!-- radio btns start -->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <!-- radio btns end -->
+            <!-- slide images start -->
+            <div class="slide first">
+                <div class="quote">
+                    <p class="quote-txt">The secret of getting ahead is Getting started.</p>
+                    <p class="author">-Mark Twain</p>
+                </div>
+            </div>  
+            <div class="slide second">
+                <div class="quote">
+                    <p class="quote-txt">Luck is what happens when preparation <br>meets opportunity</p>
+                    <p class="author">-Seneca</p>
+                </div>
+            </div> 
+                    
+            <div class="slide third">
+                <div class="quote">
+                    <p class="quote-txt">Do what you can, with what you have, where you are</p>
+                    <p class="author">-Theodore Roosevelt</p>
+                </div>    
+            </div>  
+            <div class="slide forth">
+                <div class="quote">
+                    <p class="quote-txt">The way to get started is to quit talking and begin doing.</p>
+                    <p class="author">-Walt Disney</p>
+                </div>    
+            </div>  
+            <!-- slide images end -->
         </div>
-        <div class="arrow">
-            <a href="#about-me"><i class="fa fa-angle-down"></i>    </a>
+        <!-- Manual navigation start -->
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
         </div>
+        
+        <!-- Manual navigation end -->
     </div>
+    <!-- img slider end -->
     <!-- Hero end -->
-
+    
     <!-- About Me start -->
     <div class="about-wrapper" id="about-me">
         <div class="about-container">
@@ -77,11 +117,12 @@
     <!-- About Me End -->
 
     <!-- Resume Start -->
-        <div class="bg-image"></div>
+    <div class="bg-image"></div>
         <div class="bg-text">
             <h1>CHECK OUT MY RÉSUMÉ!</h1>
             <button class="resume-btn" id="resumeBtn">Click to See Resume</button>
         </div>
+    
 
     <!-- portfolio start -->
     <section id="portfolio" class="portfolio-wrapper">

@@ -2,11 +2,14 @@
 @import 'config';
 @import 'portfolio';
 @import 'about-me';
+@import 'img-slider';
 
 // Menu Font Style
 @import url('https://fonts.googleapis.com/css2?family=Gudea&display=swap');
 // font-family: 'Gudea', sans-serif;
 
+
+// footer
 footer{
     display: flex;
     flex-direction: column;
@@ -16,6 +19,7 @@ footer{
     margin-top: 100px;
     background-color: rgb(32, 32, 32);
 
+    // four icons: fb. linkedin, email, github
     .icon-link{
         padding: 30px;
         a{
