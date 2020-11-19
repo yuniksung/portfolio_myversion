@@ -7,6 +7,10 @@ overflow: hidden;
     width: 500%;
     height: 100vh;
     display: flex;
+    @include breakpoint(third-big){
+        height: 46vh;
+    }
+
         input{
             display: none;
         }
@@ -21,21 +25,37 @@ overflow: hidden;
         background-image: url(../images/header/bg1.jpg);
         background-position: bottom;
         background-size: cover;
+        @include breakpoint(third-big){
+            background-position: top;
+            background-size: contain;
+        }
     }
     .second{
         background-image: url(../images/header/bg2.jpg);
         background-position: bottom;
         background-size: cover;
+        @include breakpoint(third-big){
+            background-position: top;
+            background-size: contain;
+        }
     }
     .third{
         background-image: url(../images/header/2.jpg);
         background-position: bottom;
         background-size: cover;
+        @include breakpoint(third-big){
+            background-position: top;
+            background-size: contain;
+        }
     }
     .forth{
         background-image: url(../images/header/mt2.jpg);
         background-position: bottom;
         background-size: cover;
+        @include breakpoint(third-big){
+            background-position: top;
+            background-size: contain;
+        }
     }
     .quote{
         display: flex;
@@ -44,7 +64,9 @@ overflow: hidden;
         align-items: center;
         height: 100vh;
         background-image: linear-gradient(to left, #070707, transparent);
-
+        @include breakpoint(third-big){
+            height: 48vh;           
+        }
 
         .quote-txt{
             margin-top: 300px;
@@ -52,7 +74,10 @@ overflow: hidden;
             font-size: 22px;
             text-align: right;
             line-height: 110%;
-            
+            @include breakpoint(third-big){
+                margin-top: 50px;      
+                font-size: 18px;     
+            }
  
         }
         .author{

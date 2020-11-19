@@ -6,7 +6,9 @@ $workBorder: rgb(109, 109, 109);
 
 // text-size
 $bodyP: 16px;
+$bodyH2-mq2: 22px;
 $bodyH2: 30px;
+$titleTxt-mq2: 50px;
 $titleTxt: 70px;
 
 * {
@@ -18,6 +20,7 @@ $titleTxt: 70px;
 
 body{
   background-color: rgb(206, 206, 206);
+  
 }
 
 // Set text color based on bg
@@ -31,17 +34,31 @@ body{
 
 // Media Queries
 @mixin breakpoint($point) {
-    @if $point == big-tablet {
-      @media (max-width: 1024px) {@content;}
+    @if $point == biggest {
+      @media (max-width: 1200px) {@content;} // 1000 ~ 1200
     }
-    @if $point == mid-tablet {
-      @media (max-width: 770px) { @content; }
+    @if $point == second-big {
+      @media (max-width: 1000px) { @content; } //800 ~ 1000
     }
-    @else if $point == new-mobile {
-      @media (max-width: 550px) { @content; }
+    @else if $point == third-big {
+      @media (max-width: 800px) { @content; } //600 ~ 800
     }
-    @else if $point == old-mobile{
+    @else if $point == fourth-big{
+      @media (max-width: 600px){ @content; }
+    }
+    @else if $point == fifth-big{
       @media (max-width: 400px){ @content; }
     }
   }
 
+  @include breakpoint(biggest){
+  }
+  @include breakpoint(second-big){
+  }
+  @include breakpoint(third-big){
+  }
+  @include breakpoint(fourth-big){
+  }
+  @include breakpoint(fifth-big){
+  }
+  

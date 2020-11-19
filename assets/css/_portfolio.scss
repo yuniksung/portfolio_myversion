@@ -41,6 +41,12 @@
         overflow: hidden;
         margin-bottom: 80px;
         padding-bottom: 20px;
+            @include breakpoint(third-big){
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+            }
+
+        
 
         // left portfolio image
         .first-img{
@@ -52,6 +58,11 @@
             background-size: cover;
             position: relative;
             box-shadow: 4px 4px 8px rgb(66, 66, 66);
+
+            @include breakpoint(third-big){
+                grid-column: 1/3;
+                grid-row: 1/3
+            }
         }
 
         .third-img{
@@ -63,6 +74,11 @@
             background-size: cover;
             position: relative;
             box-shadow: 4px 4px 8px rgb(66, 66, 66);
+
+            @include breakpoint(third-big){
+                grid-column: 1/3;
+                grid-row: 1/3
+            }
         }
 
         .left-content {
@@ -75,11 +91,29 @@
             align-items: flex-end;
             margin-top: 100px;
 
+            @include breakpoint(third-big){
+                grid-column: 1/3;
+                grid-row: 2/3;
+                background-color: #424242;
+                z-index: 6;
+                padding: 20px;
+                position: relative;
+                box-shadow: 4px 4px 8px #424242;
+            }
+
             .portfolio-title{
                 text-align: right;
                 padding-bottom: 20px;
+
+                @include breakpoint(third-big){
+                    text-align: center;
+                    padding-bottom: 0;
+                }
                 p{
                     font-size: $bodyH2;
+                    @include breakpoint(third-big){
+                        font-size: $bodyH2-mq2;
+                    }
                 };
             }
 
@@ -90,10 +124,21 @@
                 position: relative;
                 box-shadow: 4px 4px 8px rgb(66, 66, 66);
 
+                @include breakpoint(third-big){
+                    box-shadow: 4px 4px 8px rgba(66, 66, 66, 0);
+                    background-color: rgba(66, 66, 66,0);
+                    text-align: right;
+                    padding: 0;
+                }
                 p{
                     color: #fff;
-                    
                     text-align: right;
+
+                    @include breakpoint(third-big){
+                        color: rgb(179, 179, 179);
+                        font-size: $bodyP;
+                    }
+                    
                 }
             }
 
