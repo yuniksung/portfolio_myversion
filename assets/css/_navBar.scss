@@ -1,4 +1,6 @@
-.cus-menu{
+
+
+nav{
     background:  rgba(206, 206, 206, 0);
     width: 100%;
     display: flex;
@@ -10,6 +12,21 @@
     transition: 0.5s;
     height: 60px;
     
+    .cus-menu{
+        background:  rgba(206, 206, 206, 0);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    position: fixed;
+    z-index: 9999;
+    transition: 0.5s;
+    height: 60px;
+    }
+    
+
+
     ul{
         position: relative;
         display: flex;
