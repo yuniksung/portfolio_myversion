@@ -2,19 +2,26 @@
     --workBorder: gray;
 }
 
+
+
 .portfolio-wrapper{
     margin: 0 auto;
     padding: 100px 0px;
     max-width: 1000px;
     display: flex;
     flex-direction: column;
-    
+    @include breakpoint(third-big){
+        width: 80%;
+    }
 
     .my-work{
         color: rgb(0, 0, 100);
         font-size: $bodyH2;
         font-weight: 700;
         margin-bottom: 50px;
+        @include breakpoint(third-big){
+            margin-bottom: 15px;
+        }
 
         &:after{
             content: "";
@@ -44,6 +51,7 @@
             @include breakpoint(third-big){
                 grid-template-columns: repeat(2, 1fr);
                 grid-template-rows: repeat(2, 1fr);
+                height: auto;
             }
 
         
@@ -61,7 +69,8 @@
 
             @include breakpoint(third-big){
                 grid-column: 1/3;
-                grid-row: 1/3
+                grid-row: 1/3;
+                opacity: 0.5;
             }
         }
 
@@ -77,7 +86,8 @@
 
             @include breakpoint(third-big){
                 grid-column: 1/3;
-                grid-row: 1/3
+                grid-row: 1/3;
+                opacity: 0.5;
             }
         }
 
@@ -92,13 +102,16 @@
             margin-top: 100px;
 
             @include breakpoint(third-big){
-                grid-column: 1/3;
-                grid-row: 2/3;
                 background-color: #424242;
+                background-image: linear-gradient(to left, #070707, transparent);
+                opacity: 0.9;
                 z-index: 6;
                 padding: 20px;
                 position: relative;
                 box-shadow: 4px 4px 8px #424242;
+                margin-top: 0;
+                grid-column: 1/3;
+                grid-row: 1/3;
             }
 
             .portfolio-title{
@@ -107,12 +120,16 @@
 
                 @include breakpoint(third-big){
                     text-align: center;
-                    padding-bottom: 0;
+                    padding-bottom: 2;
                 }
                 p{
                     font-size: $bodyH2;
                     @include breakpoint(third-big){
                         font-size: $bodyH2-mq2;
+                        color: rgb(133, 133, 133);
+                        font-weight: 700;
+                        border-bottom: 1px solid rgb(235, 235, 235);
+                        padding-bottom: 2;
                     }
                 };
             }
@@ -144,13 +161,18 @@
 
             .portfolio-list{
                 display: flex;
-                
                 padding: 20px 0;
                 li{
                     margin-left: 20px;
                     list-style: none;
                     font-size: 20px;
                     padding: 20px auto auto 10px;
+
+                    @include breakpoint(third-big){
+                        font-size: 14px;
+                        color: rgb(145, 145, 145);
+                        padding: 12px auto auto 6px;
+                    }
                 }
             }
 
@@ -160,6 +182,11 @@
                     color: rgb(56, 56, 56);
                     font-size: 30px;
                     text-decoration: none;
+
+                    @include breakpoint(third-big){
+                        margin: 10px;
+                        color: rgb(145, 145, 145);
+                    }
 
                     &:hover{
                         color: rgb(82, 82, 82);
@@ -183,6 +210,11 @@
         overflow: hidden;
         margin-bottom: 80px;
         padding-bottom: 20px;
+        @include breakpoint(third-big){
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            height: auto;
+        }
 
         // left portfolio image
         .right-img{
@@ -194,6 +226,12 @@
             background-size: cover;
             position: relative;
             box-shadow: -4px 4px 8px rgb(66, 66, 66);
+
+            @include breakpoint(third-big){
+                grid-column: 1/3;
+                grid-row: 1/3;
+                opacity: 0.5;
+            }
         }
 
         .right-content {
@@ -205,14 +243,41 @@
             justify-content: flex-start;
             align-items: flex-start;
             margin-top: 100px;
+
+            @include breakpoint(third-big){
+                background-color: #424242;
+                background-image: linear-gradient(to left, #070707, transparent);
+                opacity: 0.9;
+                z-index: 6;
+                padding: 20px;
+                position: relative;
+                box-shadow: 4px 4px 8px #424242;
+                margin-top: 0;
+                grid-column: 1/3;
+                grid-row: 1/3;
+            }
             
 
             .portfolio-title{
                 text-align: left;
                 padding-bottom: 20px;
+
+                @include breakpoint(third-big){
+                    text-align: center;
+                    padding-bottom: 2;
+                }
                 p{
                     font-size: $bodyH2;
+                    @include breakpoint(third-big){
+                        font-size: $bodyH2-mq2;
+                        color: rgb(133, 133, 133);
+                        font-weight: 700;
+                        border-bottom: 1px solid rgb(235, 235, 235);
+                        padding-bottom: 2;
+                    }
                 };
+
+                
             }
 
             .right-description{
@@ -221,23 +286,40 @@
                 padding: 20px;
                 position: relative;
                 box-shadow: -4px 4px 8px rgb(66, 66, 66);
+                @include breakpoint(third-big){
+                    box-shadow: 4px 4px 8px rgba(66, 66, 66, 0);
+                    background-color: rgba(66, 66, 66,0);
+                    text-align: right;
+                    padding: 0;
+                }
+
+                
 
                 p{
                     color: #fff;
-                    
                     text-align: left;
+                    @include breakpoint(third-big){
+                        color: rgb(179, 179, 179);
+                        font-size: $bodyP;
+                    }
                 }
             }
 
             .portfolio-list{
                 display: flex;
-                
                 padding: 20px 0;
+
                 li{
-                    margin-left: 20px;
+                    margin-right: 20px;
                     list-style: none;
                     font-size: 20px;
                     padding: 20px auto auto 10px;
+
+                    @include breakpoint(third-big){
+                        font-size: 14px;
+                        color: rgb(145, 145, 145);
+                        padding: 12px auto auto 6px;
+                    }
                 }
             }
 
@@ -247,6 +329,11 @@
                     color: rgb(56, 56, 56);
                     font-size: 30px;
                     text-decoration: none;
+
+                    @include breakpoint(third-big){
+                        margin: 10px;
+                        color: rgb(145, 145, 145);
+                    }
 
                     &:hover{
                         color: rgb(82, 82, 82);
@@ -280,6 +367,11 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 20px;
+
+        @include breakpoint(third-big){
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     .box {
@@ -292,6 +384,10 @@
         box-shadow: 4px 4px 8px rgb(54, 54, 54);
         transition: 0.35s;
 
+        @include breakpoint(third-big){
+            height: auto;
+        }
+
         &:hover{
             transform:scale(1.1);
         }
@@ -299,11 +395,17 @@
         .link-project{
             text-align: right;
             margin-bottom: 20px;
+
+            @include breakpoint(third-big){
+                margin-bottom: 0;
+            }
+
             a{
                 text-decoration: none;
                 color: rgb(148, 148, 148);
                 font-size: 30px;
                 padding-left: 20px;
+                
 
                 &:hover{
                     color: rgb(212, 212, 212);
@@ -315,6 +417,10 @@
             margin-bottom: 10px;
             h2{
                 color: #fff;
+
+                @include breakpoint(third-big){
+                    font-size: 20px;
+                }
             }
         }
 
