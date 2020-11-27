@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 60vh;
+    height: 100vh;
 
     @include breakpoint(third-big){
         height: 55vh;
@@ -155,11 +155,12 @@
 .bg-image {
     background-image: url(../images/header/1.jpg);
     filter: saturate(5%);
-    height: 600px; 
+    height: 40vh; 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    @include flexCenter;
     @include breakpoint(third-big){
         display: none;
     }
@@ -168,11 +169,7 @@
 .bg-text {
     color: white;
     font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transform: translate(0%, -250%);
+    text-align: center;
     z-index: 2;
 
     @include breakpoint(third-big){

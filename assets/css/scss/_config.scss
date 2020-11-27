@@ -3,6 +3,9 @@
 $navColor:rgb(211, 211, 211);
 $defaultbg: #fff;
 $workBorder: rgb(109, 109, 109);
+$portfolio-textBox:rgb(66, 66, 66);
+$footer-other-box:rgb(41, 41, 41);
+$background-color: rgb(206, 206, 206);
 
 // text-size
 $bodyP: 16px;
@@ -19,7 +22,7 @@ $titleTxt: 70px;
 }
 
 body{
-  background-color: rgb(206, 206, 206);
+  background-color: $background-color;
   
 }
 
@@ -30,6 +33,34 @@ body{
     } @else {
         @return #fff3da;
     }
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexRound {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+// scroll bar design
+::-webkit-scrollbar{
+  width: 15px;
+
+  
+}
+
+::-webkit-scrollbar-thumb{
+  background: rgb(32, 32, 32);
+  border-radius:20px;
+
+  &:hover{
+      background:rgb(182, 182, 182);
+  }
 }
 
 // Media Queries

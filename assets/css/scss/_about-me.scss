@@ -1,0 +1,122 @@
+.about-me{
+    width: 80%;
+    margin: 15vh auto 0 auto;
+    height: 70vh;
+    display: flex;
+    flex-wrap: wrap;
+
+    .myself-box{
+        width: 42%;
+        height: 400px;
+        margin: 10px;
+        padding: 20px;
+        background-color: $background-color; 
+        color: $footer-other-box;
+        @include flexCenter;
+        flex-direction: column;
+        box-shadow: 2px 2px 10px rgba(94, 94, 94, 0.7);
+
+        h1{
+            margin-bottom: 30px;
+            font-size: 60px;
+        }
+
+        h2{
+            margin-bottom: 30px;
+        }
+
+        .fa-quote-left{
+            margin-bottom: 10px;
+        }
+
+        p {
+            width: 80%;
+            line-height: 200%;
+            text-align: center;
+        }
+
+        .fa-quote-right{
+            margin-top: 10px;
+        }
+    }
+
+    .ability{
+        width: 42%;
+        height: 400px;
+        margin: 10px;
+        padding: 20px;
+        background-color: $background-color; 
+        color: $footer-other-box;
+        box-shadow: 2px 2px 10px rgba(94, 94, 94, 0.7);
+        @include flexRound;
+        flex-direction: column;
+
+        h3{
+            font-size: 60px;
+        }
+
+        .skill-set{
+            @include flexCenter;
+
+            ul {
+
+                li {
+                    margin: 0 30px;
+                    line-height: 200%;
+                }
+            }
+        }
+    }
+}
+
+.see-resume{
+    color: rgb(87, 87, 87);
+    font-style: italic;    
+}
+
+.my-link{
+    width: 100%;
+    @include flexCenter;
+    
+    a{
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        line-height: 55px;
+        margin: 0 20px;
+        text-decoration: none;
+        color: #292929;
+        text-align: center;
+        padding: 7px;
+        border-radius: 50%;
+        transition: .6s;
+
+        &:hover{
+            transform: translate(0, -10px);
+            color: #fff;
+            box-shadow: 1px 5px 5px rgba(0, 0, 0, .6);
+        }
+
+        &:nth-child(1):hover {
+            background-color: #dd4b39;
+        }
+        &:nth-child(2):hover {
+            background-color: #0077B5;
+        }
+        &:nth-child(3):hover {
+            background-color: #24292e;
+        }
+        &:nth-child(4):hover {
+            background-color: #bd081c;
+        }
+
+    }
+
+}
+
+
+   
+
+
+
+

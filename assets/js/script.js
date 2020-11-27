@@ -8,4 +8,5 @@ window.addEventListener("scroll", function() {
         menuArea.classList.remove("cus-nav");
         menuArea.classList.add("cus-menu");
     }
-})
+});
+
