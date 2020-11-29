@@ -1,5 +1,5 @@
 // Variables
-// color
+// default color
 $navColor:rgb(211, 211, 211);
 $defaultbg: #fff;
 $workBorder: rgb(109, 109, 109);
@@ -7,12 +7,19 @@ $portfolio-textBox:rgb(66, 66, 66);
 $footer-other-box:rgb(41, 41, 41);
 $background-color: rgb(206, 206, 206);
 
-// text-size
+// Default text-size
 $bodyP: 16px;
 $bodyH2-mq2: 22px;
 $bodyH2: 30px;
 $titleTxt-mq2: 50px;
 $titleTxt: 70px;
+
+// About me box variable
+$box-height: 350px;
+$header-title: 45px;
+
+// About me box variable
+$default-shadow: 0 3px 8px rgba(0, 0, 0, .3);
 
 * {
     margin: 0;
